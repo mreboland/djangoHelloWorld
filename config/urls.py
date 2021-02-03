@@ -20,5 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # This works by when a user visits the homepage, they will first be routed to the 'pages' app, and then to the homePageView view set in the pages/urls.py file
+    # Think of this url as the gateway to the various url patterns in each distinct app.
     path("", include("pages.urls")),
 ]
